@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+       <style>
+            .search{
+                height: 30px;
+                font-size: 20px;
+                padding: 20px;
+                width: 80% ;
+                border-radius: 20px;
+                color: black;
+            }
+
+            .button{
+                padding: 11px;
+                border-radius: 20px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div align="center" style="margin-top: 20%"> 
+    
+            <h1> Assistant Intelligent </h1>
+            <form action="{{url_for("index") }}" method="POST" enctype="multipart/form-data">
+    
+                <input name="query" class="search" type="text" id="input" placeholder="Comment puis-je t'aider aujourd'hui" style=" height: 30px; font-size: 20px;">
+                <input type="submit" value="Rechercher">
+            </form>
+    
+        </div>
+        {% if resultat %}
+        {{resultat}}
+        {% endif %}
+    
+    </body>
+</html>
+
